@@ -1,22 +1,15 @@
-import Logo from "@/assets/logo.png";
-import HelloWorld from "@/components/HelloWorld/HelloWorld";
-import Paper from "@mui/material/Paper";
-import styles from "./App.module.css";
-import AcUnit from "@mui/icons-material/AcUnit";
+import { BrowserRouter } from 'react-router-dom';
+import { CssBaseline } from '@mui/material';
+import Routing from './routes/Routing';
+import React from 'react';
 
-export default function App() {
-  return (
-    <main className={styles.main}>
-      <Paper>
-        <img
-          className={styles.logo}
-          alt="React logo"
-          width="400px"
-          src={Logo}
-        />
-        <HelloWorld msg="Hello React + TypeScript + Vite" />
-        <AcUnit />
-      </Paper>
-    </main>
-  );
-}
+const App = () => {
+    return (
+        <BrowserRouter>
+            <CssBaseline />
+            <Routing />
+        </BrowserRouter>
+    );
+};
+
+export default App;
